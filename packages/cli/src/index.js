@@ -10,13 +10,12 @@ process.on("unhandledRejection", (err) => {
 
 const argv = yargs
   .version()
-  .usage("Usage: $0 <project-directory>")
+  .usage("Usage: <name-of-project>")
   .alias("help", "h")
   .alias("version", "v")
   .help()
   .example(
-    "$0 todo-app",
-    'Create "todo-app" project relative to current directory'
+    'Create project relative to current directory'
   )
   .strict().argv;
 const projectDirectory = argv._[0];
@@ -43,7 +42,12 @@ if (projectDirectory) {
     target = path.relative(cwd, root);
   }
   if (target !== "") {
-    console.log(`  cd ${target}`);
+    console.log(`  How to run :`);
+    console.log(`  * cd ${target}`);
+    console.log(`  * yarn install`);
+    console.log(`  * rename .env.example to be .env`);
+    console.log(`  * yarn dev`);
+    console.log(`  * open http://localhost:{port}`)
   }
   console.log();
 } else {
