@@ -1,0 +1,22 @@
+{
+  "name": "create-nodejs-app",
+  "version": "0.0.1",
+  "description": "Boilerplate for node api",
+  "author": "hermawan22 <hermawan.remote@gmail.com>",
+  "homepage": "https://github.com/hermawan22/create-nodejs-app#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hermawan22/create-nodejs-app.git"
+  },
+  "bin": {
+    "create-node-api": "./bin/cli.js"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^9.0.1",
+    "global": "^4.4.0",
+    "yargs": "^16.1.1"
+  }
+}
