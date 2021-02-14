@@ -1,5 +1,5 @@
 import {
-  cleanEnv, port, str,
+  cleanEnv, port, str, json
 } from 'envalid';
 
 const validateEnv = () => {
@@ -11,6 +11,7 @@ const validateEnv = () => {
     DB_PASSWORD: str(),
     DB_NAME: str(),
     PORT: port(),
+    FEATURE_FLAGS: str()
   });
 }
 
