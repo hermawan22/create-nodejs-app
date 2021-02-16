@@ -1,4 +1,4 @@
-## Create Node API
+## Create NodeJS App
 
 ### How to install
 ```
@@ -16,7 +16,7 @@ yarn global add @hermawan22/create-nodejs-app
 ### How to run
 
 ```
-create-node-api <name-of-project>
+create-nodejs-app <name-of-project>
 cd <name-of-project>
 yarn install
 yarn dev
@@ -25,9 +25,3 @@ yarn dev
 ### Structure of project
 - I grouped the code based on modules (e.g user and auth in this boilerplate, try look into `modules` folder)
 - Routes is at `routes.ts`, simply create instance and pass path arguments to used by modules (see example at `modules` folder)
-
-### Roadmap
-coming soon...
-
-### Contributing
-coming soon...
