@@ -3,6 +3,7 @@
     "sourceMap": true,
     "target": "es2017",
     "outDir": "./build",
+    "module": "commonjs",
     "baseUrl": ".",
     "paths": {
       "@config/*": ["src/config/*"],
