@@ -6,6 +6,8 @@ import RouterInterface from '@helpers/interfaces/router';
 import errorMiddleware from '@helpers/middleware/error';
 import { loggerMiddleware, errorLoggerMiddleware } from '@helpers/middleware/logger';
 
+import { RegisterRoutes } from "./helpers/openApi/routes";
+
 class App {
   private app: express.Application;
 
@@ -18,6 +20,7 @@ class App {
     this.initializeErrorLogger()
     this.initializeErrorHandling();
     this.initialEndpoint();
+    RegisterRoutes(this.app);
   }
 
   public listen() {
