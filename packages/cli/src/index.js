@@ -46,10 +46,9 @@ if (projectDirectory) {
     console.log(`  * cd ${target}`);
     console.log(`  * yarn install`);
     console.log(`  * rename .env.example to be .env`);
-    console.log(`  * yarn dev`);
+    console.log(`  * yarn start`);
     console.log(`  * open http://localhost:{port}`)
   }
-  console.log();
 } else {
   yargs.showHelp();
 }

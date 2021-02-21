@@ -12,7 +12,7 @@ const database: ConnectionOptions = {
     __dirname + '/../**/entity/*{.ts,.js}',
   ],
   migrations: [
-    'src/migrations/*.ts',
+    __dirname + '/../**/migrations/*.{ts, js}',
   ],
   cli: {
     migrationsDir: 'src/migrations',

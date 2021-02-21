@@ -2,7 +2,7 @@ import * as request from 'supertest';
 import * as typeorm from 'typeorm';
 import App from '../../../../app';
 import CreateUserDto from '@modules/user/dto';
-import AuthRouter from '@modules/common/auth/router';
+import AuthRouter from '@modules/common/auth/controller';
 
 (typeorm as any).getRepository = jest.fn();
 

@@ -1,5 +1,7 @@
 ## Create NodeJS App
 
+CLI tools to create nodejs api boilerplate
+
 ### How to install
 ```
 npx @hermawan22/create-nodejs-app <name-of-project>
@@ -18,8 +20,7 @@ yarn global add @hermawan22/create-nodejs-app
 ```
 create-nodejs-app <name-of-project>
 cd <name-of-project>
-yarn install
-yarn dev
+yarn && yarn start
 ```
 
 ### Structure of project
