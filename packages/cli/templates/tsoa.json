@@ -1,12 +1,21 @@
 {
   "entryFile": "src/app.ts",
   "noImplicitAdditionalProperties": "throw-on-extras",
-  "controllerPathGlobs": ["src/**/*Controller.ts"],
+  "controllerPathGlobs": ["src/**/controller/*.ts"],
   "spec": {
     "outputDirectory": "./src/helpers/openApi",
     "specVersion": 3
   },
   "routes": {
     "routesDir": "./src/helpers/openApi"
+  },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@config/*": ["src/config/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@modules/*": ["src/modules/*"],
+      "@utils/*": ["src/utils/*"]
+    }
   }
 }

@@ -5,6 +5,7 @@
     "outDir": "./build",
     "module": "commonjs",
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "paths": {
       "@config/*": ["src/config/*"],
       "@helpers/*": ["src/helpers/*"],

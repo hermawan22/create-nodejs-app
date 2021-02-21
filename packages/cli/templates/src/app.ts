@@ -1,6 +1,7 @@
 import * as bodyParser from 'body-parser';
 import * as cookieParser from 'cookie-parser';
 import * as express from 'express';
+import * as swaggerUI from 'swagger-ui-express';
 
 import RouterInterface from '@helpers/interfaces/router';
 import errorMiddleware from '@helpers/middleware/error';
@@ -15,12 +16,13 @@ class App {
     this.app = express();
 
     this.initializeMiddlewares();
+    RegisterRoutes(this.app);
     this.initializeLogger();
     this.initializeControllers(controllers);
     this.initializeErrorLogger()
     this.initializeErrorHandling();
     this.initialEndpoint();
-    RegisterRoutes(this.app);
+    this.initializeDocs();
   }
 
   public listen() {
@@ -34,6 +36,11 @@ class App {
   }
 
   private initializeMiddlewares() {
+    this.app.use(
+      bodyParser.urlencoded({
+        extended: true,
+      })
+    );
     this.app.use(bodyParser.json());
     this.app.use(cookieParser());
   }
@@ -48,6 +55,14 @@ class App {
 
   private initializeErrorLogger() {
     this.app.use(errorLoggerMiddleware)
+  }
+
+  private initializeDocs() {
+    this.app.use("/docs", swaggerUI.serve, async (_req: express.Request, res: express.Response) => {
+      return res.send(
+        swaggerUI.generateHTML(await import("./helpers/openApi/swagger.json"))
+      );
+    });
   }
 
   // Demo purpose only
