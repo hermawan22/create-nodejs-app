@@ -7,8 +7,6 @@ CLI tools to create nodejs api boilerplate
 npx @hermawan22/create-nodejs-app <name-of-project>
 or
 npm install -g @hermawan22/create-nodejs-app
-or
-yarn global add @hermawan22/create-nodejs-app
 ```
 
 ### Initial setup
@@ -25,4 +23,4 @@ yarn && yarn start
 
 ### Structure of project
 - I grouped the code based on modules (e.g user and auth in this boilerplate, try look into `modules` folder)
-- Routes is at `routes.ts`, simply create instance and pass path arguments to used by modules (see example at `modules` folder)
+- Routes for (non open api) is at `routes.ts`, simply create instance and pass path arguments to used by modules (see example at `modules` folder)
